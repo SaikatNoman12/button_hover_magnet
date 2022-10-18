@@ -2,9 +2,7 @@ const button = document.querySelectorAll('.button');
 const pointer = document.querySelector('.pointer');
 
 
-
-
-
+// button hover magnet;
 button.forEach(buttonBox => {
 
     buttonBox.addEventListener('mousemove', (e) => {
@@ -31,8 +29,6 @@ button.forEach(buttonBox => {
     });
 
 });
-
-
 
 
 // pointer event
