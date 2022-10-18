@@ -5,50 +5,56 @@
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    cursor: none;
 }
 
 .container {
     display: flex;
-    width: 100%;
-    min-height: calc(100vh);
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
-button {
-    appearance: none;
+.button {
     border: none;
-    outline: none;
-    padding: 10px 24px;
-    border-radius: 10px;
-    font-family: monospace;
-    font-size: 24px;
-    font-weight: 500;
+    border-radius: .5rem;
+    padding: 1rem 3rem;
     background-color: var(--i);
-    box-shadow: 0 0 10px var(--i);
+    box-shadow: 0px 0px 10px var(--i);
+    transition: transform .2s ease;
+    cursor: none;
 }
 
 .button:not(:last-child) {
-    margin-bottom: 36px;
+    margin-bottom: 3rem;
 }
 
 .button span {
+    display: block;
     color: #fff;
+    font-size: 20px;
+    font-weight: 600;
     letter-spacing: 1px;
+    font-family: monospace;
     pointer-events: none;
 }
 
-
 .pointer {
-    width: 18px;
-    height: 18px;
+    width: 10px;
+    height: 10px;
     position: absolute;
-    background-color: black;
+    background-color: #000;
+    pointer-events: none;
     border-radius: 50%;
     transition: left .1s ease, top .1s ease;
+    transition-delay: 0s;
+}
+
+.pointer.buttonHover {
+    transform: scale(3.5);
+    background-color: #fff;
+    opacity: 0.6;
 }
