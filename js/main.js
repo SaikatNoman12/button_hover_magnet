@@ -5,6 +5,7 @@ const pointer = document.querySelector('.pointer');
 // button hover magnet;
 button.forEach(buttonBox => {
 
+    // button mousemove:
     buttonBox.addEventListener('mousemove', (e) => {
 
         const position = buttonBox.getBoundingClientRect();
@@ -19,6 +20,7 @@ button.forEach(buttonBox => {
 
     });
 
+    // button mouseout:
     buttonBox.addEventListener('mouseout', () => {
 
         buttonBox.style.transform = `translate(0px, 0px)`;
