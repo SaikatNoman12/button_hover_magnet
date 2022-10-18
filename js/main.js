@@ -11,13 +11,10 @@ button.forEach(buttonBox => {
 
         const position = buttonBox.getBoundingClientRect();
 
-        console.log(position.width);
-
         const x = e.pageX - position.left - position.width / 2;
         const y = e.pageY - position.top - position.height / 2;
 
         buttonBox.style.transform = `translate(${x * .15}px, ${y * .15}px)`;
-
         buttonBox.children[0].style.transform = `translate(${x * .2}px, ${y * .2}px)`;
 
         pointer.classList.add('buttonHover');
@@ -40,6 +37,8 @@ button.forEach(buttonBox => {
 
 // pointer event
 window.addEventListener('mousemove', (e) => {
+
     pointer.style.left = e.clientX + 'px';
     pointer.style.top = e.clientY + 'px'
-})
+
+});
